@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Share Modal App</title>
+
+        <link rel="stylesheet" href="shareModal.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="wrapper">
+                    <!-- Circle 1 -->
+                <div class="circle-1"></div>
+
+                    <!-- Circle 2 -->
+                <div class="circle-2"></div>
+
+                    <!-- Profile Section -->
+                <div class="card-wrapper">
+                        <!-- image -->
+                    <img src="./image mine.jpg" 
+                    />
+
+                        <!-- Heading -->
+                    <h2 class="user-name">
+                        Sahil Kumar
+                    </h2>
+
+                        <!-- Sub Heading -->
+                    <h3 class="designation">
+                        Founder, India Falcons
+                    </h3>
+
+                        <!-- Buttons -->
+                    <div class="bottom-group">
+                            <!-- Share my profile -->
+                        <button onclick="openModal()" class="btn-share btn-card">
+                            <i class="fa fa-share" aria-hidden="true"></i>
+                            <span>Share My Profile</span>
+                        </button>
+
+                            <!-- Follow Me -->
+                        <button class="btn-follow btn-card">
+                            Follow Me
+                        </button>
+                    </div>
+                </div>
+
+                    <!-- Modal Component -->
+                <div class="modal active">
+                            <!-- Upper Heading -->
+                    <div class="modal-header">
+                        <h1>
+                            Share My Profile
+                        </h1>
+
+                        <div>
+                            <i onclick="closeModal()" class="fa-solid fa-xmark close"></i>
+                        </div>
+                    </div>
+
+                            <!-- Down links and Heading -->
+                    <div class="links">
+                        <h3>Share this via</h3>
+
+                        <div class="icon-container">
+                            <a href="#" class="icon" id="facebook">
+                                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="#" class="icon" id="twitter">
+                                <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="#" class="icon" id="instagram">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="#" class="icon" id="whatsapp">
+                                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="#" class="icon" id="telegram">
+                                <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Overlay Component -->
+                <div class="overlay overlayactive" onclick="closeModal()"></div>
+        </div>
+
+        <script src="shareModal.js"></script>
+        <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    </body>
+</html>
